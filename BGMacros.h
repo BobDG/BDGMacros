@@ -1,5 +1,5 @@
 //
-//  Macros.h
+//  BGMacros.h
 //
 //  Created by Bob de Graaf on 07-07-13.
 //  Copyright (c) 2013 GraafICT. All rights reserved.
