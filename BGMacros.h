@@ -8,16 +8,18 @@
 //Simple macros
 #define nsprefs                 [NSUserDefaults standardUserDefaults]
 #define iPhone5                 ([[UIScreen mainScreen] bounds].size.height == 568.0)
-#define iOS6                    ([[UIDevice currentDevice] systemVersion].floatValue >= 6.0)
 #define isPad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define iOS5                    ([[UIDevice currentDevice] systemVersion].floatValue >= 5.0)
+#define iOS6                    ([[UIDevice currentDevice] systemVersion].floatValue >= 6.0)
+#define iOS7                    ([[UIDevice currentDevice] systemVersion].floatValue >= 7.0)
 #define isPortrait              UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)
 
 //Formulas/conversions
-#define radians(degrees)        degrees * M_PI / 180
-#define convertToCm(inch)       inch*2.54
-#define convertToKg(lbs)        lbs/2.2
-#define convertToInch(cm)       cm/2.54
 #define convertToLbs(kg)        kg*2.2
+#define convertToInch(cm)       cm/2.54
+#define convertToKg(lbs)        lbs/2.2
+#define convertToCm(inch)       inch*2.54
+#define radians(degrees)        degrees * M_PI / 180
 
 //Singletons
 #import "AppDelegate.h"
@@ -26,6 +28,14 @@
 //Folders
 #define tempFolder              NSTemporaryDirectory()
 #define docFolder               [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+
+//AppName
+#define LOCALIZED_APP_NAME      [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"]
+#define APPNAME                 LOCALIZED_APP_NAME ? LOCALIZED_APP_NAME : [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
+
+//Show messages
+#define showM1(MSG)             [[[UIAlertView alloc] initWithTitle:APPNAME message:(MSG) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"") otherButtonTitles:nil] show]
+#define showM2(TITLE,MSG)       [[[UIAlertView alloc] initWithTitle:(TITLE) message:(MSG) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"") otherButtonTitles:nil] show]
 
 //Debug log
 #ifdef DEBUG
