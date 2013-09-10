@@ -22,8 +22,7 @@
 #define radians(degrees)        degrees * M_PI / 180
 
 //Singletons
-#import "AppDelegate.h"
-#define pDel                    ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define pDel                    [[UIApplication sharedApplication] delegate]
 
 //Folders
 #define tempFolder              NSTemporaryDirectory()
