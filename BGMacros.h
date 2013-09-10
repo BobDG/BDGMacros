@@ -21,9 +21,6 @@
 #define convertToCm(inch)       inch*2.54
 #define radians(degrees)        degrees * M_PI / 180
 
-//Singletons
-#define pDel                    [[UIApplication sharedApplication] delegate]
-
 //Folders
 #define tempFolder              NSTemporaryDirectory()
 #define docFolder               [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
