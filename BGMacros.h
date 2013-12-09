@@ -21,6 +21,12 @@
 #define convertToCm(inch)       inch*2.54
 #define radians(degrees)        degrees * M_PI / 180
 
+//Day/Week/Month/Year in seconds
+#define kMinuteInSeconds        60
+#define kHourInSeconds          3600
+#define kDayInSeconds           86400
+#define kWeekInSeconds          604800
+
 //Folders
 #define tempFolder              NSTemporaryDirectory()
 #define docFolder               [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
@@ -32,6 +38,14 @@
 //Show messages
 #define showM1(MSG)             [[[UIAlertView alloc] initWithTitle:APPNAME message:(MSG) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"") otherButtonTitles:nil] show]
 #define showM2(TITLE,MSG)       [[[UIAlertView alloc] initWithTitle:(TITLE) message:(MSG) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"") otherButtonTitles:nil] show]
+
+//Logfonts
+#define logAllFonts             for(NSString *fontFamilyStrings in [UIFont familyNames]) { \
+NSLog(@"Font family: %@", fontFamilyStrings); \
+for(NSString *fontStrings in [UIFont fontNamesForFamilyName:fontFamilyStrings]) { \
+NSLog(@"-- Font: %@", fontStrings); \
+} \
+}
 
 //Debug log
 #ifdef DEBUG
