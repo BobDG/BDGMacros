@@ -1,7 +1,7 @@
 //
-//  BGMacros.h
+//  BDGMacros.h
 //
-//  Created by Bob de Graaf on 07-07-13.
+//  Created by Bob de Graaf on 07-07-12.
 //  Copyright (c) 2014 GraafICT. All rights reserved.
 //
 
