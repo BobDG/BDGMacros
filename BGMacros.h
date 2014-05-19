@@ -2,7 +2,7 @@
 //  BGMacros.h
 //
 //  Created by Bob de Graaf on 07-07-13.
-//  Copyright (c) 2013 GraafICT. All rights reserved.
+//  Copyright (c) 2014 GraafICT. All rights reserved.
 //
 
 //Simple macros
