@@ -27,6 +27,20 @@
 #define kDayInSeconds           86400
 #define kWeekInSeconds          604800
 
+//Strings
+#define	NSLS(str)               NSLocalizedString(str, nil)
+
+//Shared instance shortcuts
+#define NOTIFICATION_CENTER                         [NSNotificationCenter defaultCenter]
+#define FILE_MANAGER                                [NSFileManager defaultManager]
+#define MAIN_BUNDLE                                 [NSBundle mainBundle]
+#define MAIN_THREAD                                 [NSThread mainThread]
+#define MAIN_SCREEN                                 [UIScreen mainScreen]
+#define APPLICATION                                 [UIApplication sharedApplication]
+#define CURRENT_DEVICE                              [UIDevice currentDevice]
+#define MAIN_RUN_LOOP                               [NSRunLoop mainRunLoop]
+#define GENERAL_PASTEBOARD                          [UIPasteboard generalPasteboard]
+
 //Folders
 #define tempFolder              NSTemporaryDirectory()
 #define docFolder               [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
