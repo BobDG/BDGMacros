@@ -1,4 +1,11 @@
-Frequently used macro's in all my xCode projects such as:
+# BDGMacros
+
+## Installation using Cocoapods
+'''
+pod 'BDGMacros'
+'''
+
+Incredibly useful macro's that I use in all my xCode projects such as:
 <br/><br/>
 isPad (iPhone or iPad?) <br/>
 iOS6 (iOS6 or higher?) <br/>
