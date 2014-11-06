@@ -12,6 +12,7 @@
 #define iOS5                    ([[UIDevice currentDevice] systemVersion].floatValue >= 5.0)
 #define iOS6                    ([[UIDevice currentDevice] systemVersion].floatValue >= 6.0)
 #define iOS7                    ([[UIDevice currentDevice] systemVersion].floatValue >= 7.0)
+#define iOS8                    ([[UIDevice currentDevice] systemVersion].floatValue >= 8.0)
 #define isPortrait              UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)
 
 //Formulas/conversions
@@ -20,6 +21,7 @@
 #define convertToKg(lbs)        lbs/2.2
 #define convertToCm(inch)       inch*2.54
 #define radians(degrees)        degrees * M_PI / 180
+#define degrees(radians)        radians * 180 / M_PI
 
 //Day/Week/Month/Year in seconds
 #define kMinuteInSeconds        60
@@ -31,15 +33,15 @@
 #define	NSLS(str)               NSLocalizedString(str, nil)
 
 //Shared instance shortcuts
-#define NOTIFICATION_CENTER                         [NSNotificationCenter defaultCenter]
-#define FILE_MANAGER                                [NSFileManager defaultManager]
-#define MAIN_BUNDLE                                 [NSBundle mainBundle]
-#define MAIN_THREAD                                 [NSThread mainThread]
-#define MAIN_SCREEN                                 [UIScreen mainScreen]
-#define APPLICATION                                 [UIApplication sharedApplication]
-#define CURRENT_DEVICE                              [UIDevice currentDevice]
-#define MAIN_RUN_LOOP                               [NSRunLoop mainRunLoop]
-#define GENERAL_PASTEBOARD                          [UIPasteboard generalPasteboard]
+#define NOTIFICATION_CENTER     [NSNotificationCenter defaultCenter]
+#define FILE_MANAGER            [NSFileManager defaultManager]
+#define MAIN_BUNDLE             [NSBundle mainBundle]
+#define MAIN_THREAD             [NSThread mainThread]
+#define MAIN_SCREEN             [UIScreen mainScreen]
+#define APPLICATION             [UIApplication sharedApplication]
+#define CURRENT_DEVICE          [UIDevice currentDevice]
+#define MAIN_RUN_LOOP           [NSRunLoop mainRunLoop]
+#define GENERAL_PASTEBOARD      [UIPasteboard generalPasteboard]
 
 //Folders
 #define tempFolder              NSTemporaryDirectory()
@@ -47,7 +49,7 @@
 
 //AppName
 #define LOCALIZED_APP_NAME      [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"]
-#define APPNAME                 LOCALIZED_APP_NAME ? LOCALIZED_APP_NAME : [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
+#define APPNAME                 LOCALIZED_APP_NAME ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 
 //Show messages
 #define showM1(MSG)             [[[UIAlertView alloc] initWithTitle:APPNAME message:(MSG) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"") otherButtonTitles:nil] show]
@@ -60,6 +62,9 @@ for(NSString *fontStrings in [UIFont fontNamesForFamilyName:fontFamilyStrings]) 
 NSLog(@"-- Font: %@", fontStrings); \
 } \
 }
+
+//LogSimulator Docfolder
+#define logSimDoc NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
 
 //Debug log
 #ifdef DEBUG
