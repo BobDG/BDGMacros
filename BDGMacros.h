@@ -7,12 +7,15 @@
 
 //Simple macros
 #define nsprefs                 [NSUserDefaults standardUserDefaults]
+#define iPhone4                 ([[UIScreen mainScreen] bounds].size.height == 480.0)
 #define iPhone5                 ([[UIScreen mainScreen] bounds].size.height == 568.0)
+#define iPhone5OrSmaller        ([[UIScreen mainScreen] bounds].size.height <= 568.0)
 #define isPad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define iOS5                    ([[UIDevice currentDevice] systemVersion].floatValue >= 5.0)
 #define iOS6                    ([[UIDevice currentDevice] systemVersion].floatValue >= 6.0)
 #define iOS7                    ([[UIDevice currentDevice] systemVersion].floatValue >= 7.0)
 #define iOS8                    ([[UIDevice currentDevice] systemVersion].floatValue >= 8.0)
+#define iOS9                    ([[UIDevice currentDevice] systemVersion].floatValue >= 9.0)
 #define isPortrait              UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)
 
 //Formulas/conversions
