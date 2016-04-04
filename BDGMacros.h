@@ -10,12 +10,17 @@
 #define iPhone4                 ([[UIScreen mainScreen] bounds].size.height == 480.0)
 #define iPhone5                 ([[UIScreen mainScreen] bounds].size.height == 568.0)
 #define iPhone5OrSmaller        ([[UIScreen mainScreen] bounds].size.height <= 568.0)
+#define iPhone6                 ([[UIScreen mainScreen] bounds].size.height == 667.0)
+#define iPhone6OrSmaller        ([[UIScreen mainScreen] bounds].size.height <= 667.0)
+#define iPhone6Plus             ([[UIScreen mainScreen] bounds].size.height == 736.0)
+#define iPhone6PlusOrSmaller    ([[UIScreen mainScreen] bounds].size.height <= 736.0)
 #define isPad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define iOS5                    ([[UIDevice currentDevice] systemVersion].floatValue >= 5.0)
 #define iOS6                    ([[UIDevice currentDevice] systemVersion].floatValue >= 6.0)
 #define iOS7                    ([[UIDevice currentDevice] systemVersion].floatValue >= 7.0)
 #define iOS8                    ([[UIDevice currentDevice] systemVersion].floatValue >= 8.0)
 #define iOS9                    ([[UIDevice currentDevice] systemVersion].floatValue >= 9.0)
+#define iOS10                   ([[UIDevice currentDevice] systemVersion].floatValue >= 10.0)
 #define isPortrait              UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)
 
 //Formulas/conversions
@@ -31,9 +36,6 @@
 #define kHourInSeconds          3600
 #define kDayInSeconds           86400
 #define kWeekInSeconds          604800
-
-//Strings
-#define	NSLS(str)               NSLocalizedString(str, nil)
 
 //Shared instance shortcuts
 #define NOTIFICATION_CENTER     [NSNotificationCenter defaultCenter]
