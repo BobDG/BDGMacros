@@ -59,17 +59,8 @@
 #define APPNAME                 LOCALIZED_APP_NAME ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 
 //Show messages
-#define showM1(MSG)             \
-UIAlertController *kAlertController = [UIAlertController alertControllerWithTitle:APPNAME message:(MSG) preferredStyle:UIAlertControllerStyleAlert];\
-[kAlertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];\
-[self presentViewController:kAlertController animated:true completion:nil];\
-CFRunLoopWakeUp(CFRunLoopGetCurrent());
-
-#define showM2(TITLE,MSG)             \
-UIAlertController *kAlertController = [UIAlertController alertControllerWithTitle:(TITLE) message:(MSG) preferredStyle:UIAlertControllerStyleAlert];\
-[kAlertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];\
-[self presentViewController:kAlertController animated:true completion:nil];\
-CFRunLoopWakeUp(CFRunLoopGetCurrent());
+#define showM1(MSG)             [[[UIAlertView alloc] initWithTitle:APPNAME message:(MSG) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"") otherButtonTitles:nil] show]
+#define showM2(TITLE,MSG)       [[[UIAlertView alloc] initWithTitle:(TITLE) message:(MSG) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"") otherButtonTitles:nil] show]
 
 #define showM2Manually(TITLE,MSG)\
 UIAlertController* kAlertController = [UIAlertController alertControllerWithTitle:(TITLE) message:(MSG) preferredStyle:UIAlertControllerStyleAlert];\
