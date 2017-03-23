@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = 'BDGMacros'
-  s.version        = '0.0.18'
+  s.version        = '0.0.19'
   s.summary        = 'xCode Macros'
   s.license 	   = 'MIT'
   s.description    = 'Really useful macros to use in every xCode project, such as isPad, conversions, suppress warnings, singleton, dlog, documentsfolder'
