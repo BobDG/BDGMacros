@@ -66,6 +66,9 @@
 UIAlertController* kAlertController = [UIAlertController alertControllerWithTitle:(TITLE) message:(MSG) preferredStyle:UIAlertControllerStyleAlert];\
 [kAlertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];\
 
+//Storyboard
+#define INSTANTIATE(viewController) [[UIStoryboard storyboardWithName:SBMain bundle:[NSBundle bundleForClass:[self class]]] instantiateViewControllerWithIdentifier:viewController];
+
 //Logfonts
 #define logAllFonts             for(NSString *fontFamilyStrings in [UIFont familyNames]) { \
 NSLog(@"Font family: %@", fontFamilyStrings); \
