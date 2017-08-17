@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.source_files   = '*.{h,m}'  
   s.platform       = :ios
   s.requires_arc   = true
+  s.ios.deployment_target = '8.0'
 end
