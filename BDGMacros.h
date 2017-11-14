@@ -125,3 +125,12 @@ _Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
 Stuff; \
 _Pragma("clang diagnostic pop") \
 } while (0)
+
+
+//Only having this for swift module
+@interface BDGMacros : NSObject
+{
+    
+}
+
+@end

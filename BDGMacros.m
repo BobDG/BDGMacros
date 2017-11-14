@@ -7,4 +7,6 @@
 
 #import "BDGMacros.h"
 
+@implementation BDGMacros
 
+@end
