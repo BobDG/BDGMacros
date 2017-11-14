@@ -16,6 +16,7 @@
 #define iPhone6OrBigger         ([[UIScreen mainScreen] bounds].size.height >= 667.0)
 #define iPhone6Plus             ([[UIScreen mainScreen] bounds].size.height == 736.0)
 #define iPhone6PlusOrSmaller    ([[UIScreen mainScreen] bounds].size.height <= 736.0)
+#define iPhoneX                 ([[UIScreen mainScreen] bounds].size.height == 812.0)
 #define isPad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define iOS5                    ([[UIDevice currentDevice] systemVersion].floatValue >= 5.0)
 #define iOS6                    ([[UIDevice currentDevice] systemVersion].floatValue >= 6.0)
@@ -23,6 +24,8 @@
 #define iOS8                    ([[UIDevice currentDevice] systemVersion].floatValue >= 8.0)
 #define iOS9                    ([[UIDevice currentDevice] systemVersion].floatValue >= 9.0)
 #define iOS10                   ([[UIDevice currentDevice] systemVersion].floatValue >= 10.0)
+#define iOS11                   ([[UIDevice currentDevice] systemVersion].floatValue >= 11.0)
+#define iOS12                   ([[UIDevice currentDevice] systemVersion].floatValue >= 12.0)
 #define isPortrait              UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)
 
 //Formulas/conversions
