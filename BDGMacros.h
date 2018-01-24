@@ -128,6 +128,7 @@ _Pragma("clang diagnostic pop") \
 
 
 //Only having this for swift module
+#import <Foundation/Foundation.h>
 @interface BDGMacros : NSObject
 {
     
