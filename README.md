@@ -1,6 +1,6 @@
 # BDGMacros
 
-Incredibly useful macro's that I use in all my xCode projects!
+Incredibly useful macro's that I use in all my Xcode projects!
 
 ## Installation using Cocoapods
 ```
